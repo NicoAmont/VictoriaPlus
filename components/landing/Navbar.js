@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image"
+import Link from "next/link"
 
 function Navbar() {
     return (
@@ -12,9 +13,19 @@ function Navbar() {
                 <path d="M-19.2489 170.943C-52.7222 173.164 -91.049 161.386 -122.376 141.151C-153.716 120.907 -177.865 92.3237 -183.253 61.083C-194.065 -1.61155 -149.832 -84.3176 -53.878 -99.4971C-25.4593 -103.993 13.1558 -103.674 47.8725 -88.7871C82.5367 -73.9226 113.382 -44.5103 126.338 9.35949C138.146 58.4638 118.594 97.6919 87.6324 125.266C56.6357 152.871 14.2683 168.72 -19.2489 170.943Z" stroke="#66839E" strokeWidth="2"/>
                 </g>
             </svg>
-            <div className="w-44">
+            
 
             <Image className="" src="/victorialogo.png" width="201" height="121" alt="" />
+            
+
+            <div  className="select top-24 sm:top-5" tabIndex="1">
+                
+                <input type="radio" className="option-select" name="test" id="opt2" />
+                <Link href="/es" passHref><label htmlFor="opt2" className="option">ES</label></Link>
+                <input type="radio" className="option-select" name="test" id="opt3" />
+                <Link href="/en" passHref><label htmlFor="opt3" className="option">EN</label></Link>
+                <input type="radio" className="option-select" name="test" id="opt4" />
+                <Link href="/" passHref><label htmlFor="opt4" className="option">LNG</label></Link>
             </div>
 
         </div>

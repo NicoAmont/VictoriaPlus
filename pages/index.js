@@ -1,3 +1,6 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/landing/Footer'
@@ -23,3 +26,10 @@ export default function Home() {
     </div>
   )
 }
+
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common', 'footer']),
+  },
+})

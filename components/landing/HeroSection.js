@@ -1,27 +1,30 @@
 import React from 'react'
+import { useTranslation } from "next-i18next";
 
 function HeroSection() {
+    
+    const { t } = useTranslation('common');
     return (
-        <div className="w-screen h-full relative flex flex-col xl:flex-row overflow-hidden  place-items-center px-5 sm:px-0">
+        <div className="w-screen h-full relative flex flex-col 2xl:flex-row overflow-hidden  place-items-center px-5 sm:px-0">
             
-            <div className="relative max-w-xl xl:ml-48 z-20 mt-40 lg:mt-0 ">
-                <h1 className="font-heads text-6xl text-bd mb-1 w-full ">Su negocio es nuestra prioridad</h1>
+            <div className="relative max-w-xl xl:ml-48 z-20 mt-40 sm:mt-24 ">
+                <h1 className="font-text2 font-semibold text-5xl text-bd mb-1 w-full ">{t('title')}</h1>
                 <div className="max-w-xl ">
-                <h2 className="font-heads text-lg  mt-2 text-bl mb-8">De su necesidad a su éxito, sin fronteras culturales</h2>
-                <p className=" font-text2 w-full text-sm text-txt mb-2"><span className="font-text text-base text-txt2  ">Victoria Plus</span>  está especializada en vincular a su empresa con proveedores internacionales.</p>
+                <h2 className="font-text2 font-medium  text-lg  mt-2 text-bl mb-8">{t('subtitle')}</h2>
+                <p className=" font-text2 w-full text-sm text-txt mb-2"><span className="font-text text-base text-txt2  ">Victoria Plus</span> {t('text1')}</p>
                 <ul className="list-disc max-w-lg pl-6 font-text2 text-sm  text-txt ">
 
-                <li className="list-disc text-sm font-text2 ">Nuestro equipo tiene gran experiencia en encontrar a los proveedores adecuados en función de sus necesidades y representar a su empresa durante todo el proceso de la negociación. </li>
-                <li>Nuestro equipo internacional evalúa sus necesidades, ayuda a su empresa a encontrar el proveedor más adecuado y lo asiste y representa hasta finalizar todos los aspectos de la negociación de una manera altamente profesional. </li>
-                <li>Nuestra experiencia en el trato con empresas de todo el mundo por parte de nuestro equipo en inglés, español, italiano, francés, portugués, alemán, hindi y chino se traduce en un alto conocimiento de todos los aspectos culturales, regionales y étnicos que benefician sus negociaciones y se traducen en el éxito de su empresa. </li>
+                <li className="list-disc text-sm font-text2 ">{t('text2')}</li>
+                <li>{t('text3')}</li>
+                <li>{t('text4')}</li>
                 </ul>
-                <h2 className="font-heads text-base mt-4  text-bl ">Por el momento seguimos a su servicio a través del email: info@victoriaplus.es</h2>    
+                <h2 className="font-text2 font-medium text-base mt-4  text-bl ">{t('text5')}</h2>    
                 </div>
                 
             </div>
                 
-                <svg className="scale-100 mt-10  left-0 w-96 sm:w-full " width="928"  viewBox="0 0 928 764" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_i_85_11)">
+                <svg className="scale-110 mt-10  left-0 w-96 sm:w-full " width="928"  viewBox="0 0 928 764" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_i_100_2)">
                     <path d="M109 657C109 657 172 585.5 183.5 569C195 552.5 218.5 509.5 222.5 501C226.5 492.5 246 442 246.5 440.5C247 439 262 391 264.5 384.5C267 378 274.5 356.5 285.5 331.5C296.5 306.5 319 271.5 319 271.5C319 271.5 332.5 252 351 230C369.5 208 397.5 186 397.5 186C397.5 186 448.5 148 482.5 130.5C516.5 113 575 88.5 590 82.5C605 76.5 704 45 721.5 40C739 35 928 0 928 0V764H0C0 764 52 713 64 704C76 695 109 657 109 657Z" fill="#BBCFDF"/>
                     </g>
                     <path d="M183.184 569L304.807 643.962L351.353 618.485L480.5 692.5L438.942 717.5V727.744L497 764L0 760.57C0 760.57 67.9664 705.307 103.604 663.56C139.242 621.813 183.184 569 183.184 569Z" fill="#417DA7"/>
@@ -65,9 +68,9 @@ function HeroSection() {
                     <path d="M309.5 494L364.5 461V469L309.5 502V494Z" fill="#4B667A"/>
                     <path d="M290.5 504.2L293.5 505.64V509L290.5 507.56V504.2Z" fill="#96AEC2"/>
                     <path d="M277.5 497L280.5 498.44V501.8L277.5 500.36V497Z" fill="#96AEC2"/>
-                    <path d="M500.5 147H533.501L566.5 224.857L548.9 256L500.5 147Z" fill="#4B667A"/>
-                    <path d="M640.5 145H606.85L557.5 274H582.176L640.5 145Z" fill="#4B667A"/>
-                    <path d="M650.045 256.93C650.045 261.545 647.575 264.535 643.09 264.535C641.27 264.535 640.295 264.405 638.41 263.885V249.26H641.66C647.185 249.26 650.045 251.47 650.045 256.93ZM659.6 256.54C659.6 247.115 653.035 243.02 642.635 243.02H629.375V288H638.41V269.93C641.335 270.645 643.025 270.905 645.625 270.905C654.01 270.905 659.6 264.535 659.6 256.54ZM692.776 288L693.621 281.435H675.226V243.02H666.191V288H692.776ZM728.641 243.02V268.435C728.641 277.99 724.936 281.89 718.371 281.89C711.481 281.89 707.841 278.055 707.841 268.565V243.02H698.806V269.54C698.806 282.02 705.371 288.65 717.656 288.65C729.616 288.65 737.156 282.345 737.156 270.19V243.02H728.641ZM744.282 285.53C748.767 287.805 753.252 288.65 757.997 288.65C767.487 288.65 773.402 283.84 773.402 275.585C773.402 267.33 767.812 264.535 762.482 261.74C756.957 258.815 753.967 257.19 753.967 253.68C753.967 250.495 756.307 248.805 760.532 248.805C763.327 248.805 766.382 249.78 769.242 251.08L771.712 244.84C768.137 243.15 763.847 242.37 759.882 242.37C751.432 242.37 744.607 246.595 744.607 254.85C744.607 262.975 750.847 266.225 755.982 268.955C761.637 271.945 764.042 273.7 764.042 276.95C764.042 280.59 761.507 282.345 757.802 282.345C754.162 282.345 750.327 280.98 746.817 279.16L744.282 285.53Z" fill="#4B667A"/>
+                    <path d="M431 108H480.501L530 224.429L503.599 271L431 108Z" fill="#4B667A"/>
+                    <path d="M641 105H590.728L517 298H553.866L641 105Z" fill="#4B667A"/>
+                    <path d="M642.545 250.93C642.545 255.545 640.075 258.535 635.59 258.535C633.77 258.535 632.795 258.405 630.91 257.885V243.26H634.16C639.685 243.26 642.545 245.47 642.545 250.93ZM652.1 250.54C652.1 241.115 645.535 237.02 635.135 237.02H621.875V282H630.91V263.93C633.835 264.645 635.525 264.905 638.125 264.905C646.51 264.905 652.1 258.535 652.1 250.54ZM685.276 282L686.121 275.435H667.726V237.02H658.691V282H685.276ZM721.141 237.02V262.435C721.141 271.99 717.436 275.89 710.871 275.89C703.981 275.89 700.341 272.055 700.341 262.565V237.02H691.306V263.54C691.306 276.02 697.871 282.65 710.156 282.65C722.116 282.65 729.656 276.345 729.656 264.19V237.02H721.141ZM736.782 279.53C741.267 281.805 745.752 282.65 750.497 282.65C759.987 282.65 765.902 277.84 765.902 269.585C765.902 261.33 760.312 258.535 754.982 255.74C749.457 252.815 746.467 251.19 746.467 247.68C746.467 244.495 748.807 242.805 753.032 242.805C755.827 242.805 758.882 243.78 761.742 245.08L764.212 238.84C760.637 237.15 756.347 236.37 752.382 236.37C743.932 236.37 737.107 240.595 737.107 248.85C737.107 256.975 743.347 260.225 748.482 262.955C754.137 265.945 756.542 267.7 756.542 270.95C756.542 274.59 754.007 276.345 750.302 276.345C746.662 276.345 742.827 274.98 739.317 273.16L736.782 279.53Z" fill="#4B667A"/>
                     <line x1="438.554" y1="716.916" x2="512.054" y2="763.916" stroke="#18435F" strokeWidth="0.2"/>
                     <line x1="438.55" y1="729.914" x2="497.05" y2="763.914" stroke="#18435F" strokeWidth="0.2"/>
                     <path d="M476.812 452.246V502.844L412.398 464.81L412.346 464.779L412.295 464.811L391.065 477.85L380.705 471.736V396.086L476.812 452.246Z" fill="#96AEC2" stroke="#18435F" strokeWidth="0.2"/>
@@ -312,7 +315,7 @@ function HeroSection() {
                     <path d="M653 626.5L664 620.5V631.5L649 639.5C649 639.5 649 635 650 632C651 629 653 626.5 653 626.5Z" fill="white"/>
                     <path d="M728.5 581.5L739.5 575.5V586.5L724.5 594.5C724.5 594.5 724.5 590 725.5 587C726.5 584 728.5 581.5 728.5 581.5Z" fill="white"/>
                     <defs>
-                    <filter id="filter0_i_85_11" x="0" y="0" width="928" height="768" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <filter id="filter0_i_100_2" x="0" y="0" width="928" height="768" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                     <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -320,16 +323,11 @@ function HeroSection() {
                     <feGaussianBlur stdDeviation="2"/>
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_85_11"/>
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_100_2"/>
                     </filter>
                     </defs>
-                </svg>
+                    </svg>
             
-
-            
-
-            
-
         </div>
     )
 }

@@ -1,8 +1,14 @@
 import React from 'react'
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from 'next/router'
 
 function Navbar() {
+    const {push, pathname, locale} = useRouter();
+    const handleChange = e => {
+        locale === e.target.value ? 0 : push(pathname, pathname, {locale: e.target.value}) 
+        
+    }
     return (
         <div className=" w-screen h-24 flex flex-row  place-items-center absolute z-50 justify-center">
             <svg className="absolute left-0 z-10 scale-125" width="196" height="183" viewBox="0 0 196 183" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,15 +24,13 @@ function Navbar() {
             <Image className="" src="/victorialogo.png" width="201" height="121" alt="" />
             
 
-            <div  className="select top-24 sm:top-5" tabIndex="1">
+            <select className="font-text bg-bd text-white uppercase p-1 absolute right-4 sm:right-20" onChange={handleChange} >
                 
-                <input type="radio" className="option-select" name="test" id="opt2" />
-                <Link href="/es" passHref><label htmlFor="opt2" className="option">ES</label></Link>
-                <input type="radio" className="option-select" name="test" id="opt3" />
-                <Link href="/en" passHref><label htmlFor="opt3" className="option">EN</label></Link>
-                <input type="radio" className="option-select" name="test" id="opt4" />
-                <Link href="/" passHref><label htmlFor="opt4" className="option">LNG</label></Link>
-            </div>
+                <option value="es" disabled selected>LNG</option>
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        
 
         </div>
     )

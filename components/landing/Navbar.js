@@ -24,7 +24,7 @@ function Navbar() {
             <Image className="" src="/victorialogo.png" width="201" height="121" alt="" />
             
 
-            <select className="font-text bg-bd text-white uppercase p-1 absolute right-4 sm:right-20" onChange={handleChange} >
+            <select className="font-text2 font-medium bg-bd text-white uppercase p-1 absolute right-4 sm:right-20" onChange={handleChange} >
                 
                 <option value="es" disabled selected>LNG</option>
                 <option value="es">ES</option>
